@@ -1413,3 +1413,99 @@ Processing by ArticlesController#show as HTML
 Completed 200 OK in 10ms (Views: 8.3ms | ActiveRecord: 0.2ms | Allocations: 5553)
 
 
+Started GET "/articles/1" for ::1 at 2021-11-08 22:47:42 +0100
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/articles_controller.rb:7:in `show'
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 1]]
+  ↳ app/views/articles/show.html.erb:13
+  Rendered collection of comments/_comment.html.erb [2 times] (Duration: 0.5ms | Allocations: 210)
+  Rendered comments/_form.html.erb (Duration: 1.4ms | Allocations: 959)
+  Rendered articles/show.html.erb within layouts/application (Duration: 11.2ms | Allocations: 5159)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 14.6ms | Allocations: 8270)
+Completed 200 OK in 18ms (Views: 15.5ms | ActiveRecord: 0.6ms | Allocations: 10488)
+
+
+Started GET "/" for ::1 at 2021-11-08 22:47:46 +0100
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:4
+  Rendered articles/index.html.erb within layouts/application (Duration: 1.7ms | Allocations: 964)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 4.5ms | Allocations: 3992)
+Completed 200 OK in 6ms (Views: 4.8ms | ActiveRecord: 0.1ms | Allocations: 4505)
+
+
+Started GET "/" for ::1 at 2021-11-08 22:47:46 +0100
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:4
+  Rendered articles/index.html.erb within layouts/application (Duration: 1.3ms | Allocations: 801)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 3.9ms | Allocations: 3826)
+Completed 200 OK in 5ms (Views: 4.1ms | ActiveRecord: 0.1ms | Allocations: 4214)
+
+
+Started GET "/articles/1" for ::1 at 2021-11-08 22:47:48 +0100
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 1]]
+  ↳ app/views/articles/show.html.erb:13
+  Rendered collection of comments/_comment.html.erb [2 times] (Duration: 0.2ms | Allocations: 87)
+  Rendered comments/_form.html.erb (Duration: 1.3ms | Allocations: 773)
+  Rendered articles/show.html.erb within layouts/application (Duration: 4.3ms | Allocations: 2480)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 7.8ms | Allocations: 5610)
+Completed 200 OK in 10ms (Views: 8.1ms | ActiveRecord: 0.1ms | Allocations: 6522)
+
+
+Started GET "/" for ::1 at 2021-11-09 18:45:17 +0100
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.6ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:4
+  Rendered articles/index.html.erb within layouts/application (Duration: 11.8ms | Allocations: 3708)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 53.6ms | Allocations: 12581)
+Completed 200 OK in 71ms (Views: 52.3ms | ActiveRecord: 4.9ms | Allocations: 19267)
+
+
+Started GET "/articles/new" for ::1 at 2021-11-09 18:45:21 +0100
+Processing by ArticlesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (Duration: 13.6ms | Allocations: 3304)
+  Rendered articles/new.html.erb within layouts/application (Duration: 17.3ms | Allocations: 4465)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 24.3ms | Allocations: 7498)
+Completed 200 OK in 26ms (Views: 25.5ms | ActiveRecord: 0.0ms | Allocations: 8039)
+
+
+Started GET "/articles/new" for ::1 at 2021-11-09 18:45:50 +0100
+Processing by ArticlesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (Duration: 3.6ms | Allocations: 978)
+  Rendered articles/new.html.erb within layouts/application (Duration: 5.4ms | Allocations: 1275)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 14.1ms | Allocations: 4474)
+Completed 200 OK in 18ms (Views: 16.3ms | ActiveRecord: 0.0ms | Allocations: 5583)
+
+
